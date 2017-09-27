@@ -33,7 +33,8 @@ VALUES (1, 'Joe Smith', 'Philadelphia', 'PA'),
 	(3, 'Mike Andersen', 'Raleigh', 'NC');
 ```
 
-
+## Customer class
+Create a class that maps to the database table.
 ```csharp
     public class Customer
     {
