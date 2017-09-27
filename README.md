@@ -1,4 +1,4 @@
-# Upsert
+# .Net Upsert
 The .Net Upsert package is for one step Update and Insert of typed collections.
 
 
