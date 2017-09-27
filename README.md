@@ -8,8 +8,13 @@ To install .Net Upsert, run the following from the Package Manager Console.
 Install-Package XXXXXXX
 ```
 
+## Important
+* Database table column names and class properties should be the same
+* Database tables must have primary keys
+* The user that executes the Upsert code must have permissions to create objects
+
 ## Setup database
-This example will create and populate a SQL Server database table
+This example will create and populate a SQL Server database table used in this example.
 ```sql
 CREATE SCHEMA Sales;
 
@@ -39,7 +44,8 @@ VALUES (1, 'Joe Smith', 'Philadelphia', 'PA'),
     }
 ```
 
-
+## Upsert
+The Upsert code will update any records that match on the primary key and attempt to insert any records that do not match on the primary key.
 ```csharp
     string connStr = @"Data Source=ServerName;Initial Catalog=DatabaseName;User Id=SomeUser; Password=password1;";
 
