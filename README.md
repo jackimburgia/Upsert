@@ -48,6 +48,9 @@ Create a class that maps to the database table.
 ## Upsert
 The Upsert code will update any records that match on the primary key and attempt to insert any records that do not match on the primary key.
 ```csharp
+using Spearing.Utilities.Data.Upsert;
+
+
     string connStr = @"Data Source=ServerName;Initial Catalog=DatabaseName;User Id=SomeUser; Password=password1;";
 
     List<Customer> customers = new List<Customer>()
