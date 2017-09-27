@@ -58,3 +58,19 @@ The Upsert code will update any records that match on the primary key and attemp
 
     customers.Upsert("Sales", "Customer", connStr);
 ```
+
+## Skip columns
+* You can skip specified columns from being updated in the event of a match.  Inserts are not affected by these parameters.
+* In this example, the first customer will match but will only update the City column even though Name and State were updated also
+* The second customer will not match and insert as expected
+```csharp
+    string connStr = @"Data Source=ServerName;Initial Catalog=DatabaseName;User Id=SomeUser; Password=password1;";
+    
+    List<Customer> customers = new List<Customer>()
+    {
+        new Customer() { CustomerID = 1, Name = "J. Smith", City = "Philly", State = "XX" },
+        new Customer() { CustomerID = 5, Name = "Terry Jenkins", City = "Los Angeles", State = "CA" }
+    };
+
+    customers.Upsert("Sales", "Customer", connStr, "Name", "State");  
+```
