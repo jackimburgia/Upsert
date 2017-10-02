@@ -1,5 +1,5 @@
 # .Net Upsert
-The .Net Upsert package is for one step Update and Insert of typed collections.
+The .Net Upsert Nuget package is for combined insert and update operations of strongly typed collections into SQL Server.
 
 
 ## Getting Started
