@@ -5,7 +5,7 @@ The .Net Upsert package is for one step Update and Insert of typed collections.
 ## Getting Started
 To install .Net Upsert, run the following from the Package Manager Console.
 ```csharp
-Install-Package XXXXXXX
+Install-Package Upsert -Version 1.0.0
 ```
 
 ## Important
